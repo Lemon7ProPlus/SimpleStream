@@ -1,8 +1,8 @@
 name: app-build-win-action
-#推送Tag时触发
 on:
   workflow_dispatch:
-    
+  
+jobs:
   # 打包Windows
   build-windows:
     runs-on: windows-latest
