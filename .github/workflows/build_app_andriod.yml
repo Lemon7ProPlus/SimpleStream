@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 jobs:
   build-android:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     permissions:
       contents: write
     steps:
@@ -38,10 +38,6 @@ jobs:
         with:
           flutter-version: '3.22.x'
           cache: true 
-
-      # 打开MAC Desktop支持
-      - name: Enable Flutter Desktop
-        run: flutter config --enable-macos-desktop
 
       #更新Flutter的packages
       - name: Restore packages
